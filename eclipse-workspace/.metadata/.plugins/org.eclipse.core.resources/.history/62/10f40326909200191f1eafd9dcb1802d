@@ -1,0 +1,39 @@
+package arraysorting;
+import java.util.Scanner;
+public class Main {
+	private static Scanner scanner = new Scanner(System.in);
+	public static void main(String[] args) {
+		int[] intarray = getarray(5);
+		intarray = sortarray(intarray);
+		displayarray(intarray);
+		
+
+	}
+	public static int[] getarray(int sz) {
+		int[] arr = new int[sz];
+		for(int i = 0 ; i < sz ; ++i) {
+			arr[i] = scanner.nextInt();
+		}
+		return arr;
+		
+	}
+	public static int[] sortarray(int[] arr) {
+		int[] temparray = new int[arr.length];
+		for(int i = 0; i<arr.length ; ++i) {
+			for(int j = 0 ; j<arr.length ; ++j) {
+				if(arr[i] < arr[i +1]) {
+					
+				}
+			}
+		}
+		
+		
+		return temparray;
+		
+	}
+	public static void displayarray(int[] arr) {
+		for(int i = 0 ; i < arr.length ; ++i ) {
+			System.out.println(arr[i]);
+		}
+	}
+}

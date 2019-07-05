@@ -1,0 +1,61 @@
+package pkg1;
+
+import java.util.Scanner;
+
+public class Main {
+	
+	private static Scanner scanner = new Scanner(System.in);
+	private static MobilePhone mobilephone = new MobilePhone();
+	
+
+	public static void main(String[] args) {
+		
+		String name , mobileno;
+		boolean quit = false;
+		
+		System.out.println("press 0 : for menu."
+				+ "\npress 1 : to add contact"
+				+ "\npress 2 : to display contacts"
+				+ "\npress 3 : to delete contact"
+				+ "\npress 4 : to modify contact"
+				+ "\npress 5 : to exit");
+		
+		
+		
+		while(!quit) {
+			int input = scanner.nextInt();
+			scanner.nextLine();
+			
+			switch(input) {
+				
+			case 0:
+				break;
+			
+			case 1:
+		
+				System.out.print("enter contact name : ");
+				name = scanner.nextLine();
+				System.out.print("enter the mobile no : ");
+				mobileno = scanner.nextLine();
+				mobilephone.savecontact(name , mobileno);
+				break;
+			case 2 :
+				mobilephone.printcontactlist();
+				break;
+			case 3 :
+				System.out.print("Enter the contact name : ");
+				name = scanner.nextLine();
+				mobilephone.delete(name);
+				break;
+			case 4:
+				break;
+				
+			case 5:
+				quit = true;
+				break;
+			}
+	
+		}
+	}
+
+}
